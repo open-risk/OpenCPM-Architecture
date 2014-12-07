@@ -1,6 +1,6 @@
 A RESTful approach:
 
-1. A server with pyoo that accesses calc workbooks in libreoffice - here python 3 and libreoffice most recent beta are required. Problems with opening multiple instances of LibreOffice Calc.
+1. A server with pyoo that accesses calc workbooks in libreoffice - here python 3 and libreoffice 4.3 are required. Problems with opening multiple instances of LibreOffice Calc.
 
 2. REST server with OData support, pyslet seems to be the option - has to run python 2.7. A tutorial is here http://qtimigration.googlecode.com/svn/ ... ample.html. In-memory will do for now. The example data does not load properly.
 
