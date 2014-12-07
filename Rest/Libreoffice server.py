@@ -1,5 +1,6 @@
 # Requires LibreOffice > 4.3
 # Written in python 3.3
+# See Webservice.ods for example usage
 
 
 
