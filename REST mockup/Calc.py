@@ -90,6 +90,7 @@ def MakeContainer(doc, drop=False, path=SAMPLE_DB):
     if drop and os.path.isfile(path):
         os.remove(path)
     create = not os.path.isfile(path)
+    #create=True
     container = SQLiteEntityContainer(
         file_path=path,
         container=doc.root.DataServices['CalcSchema.Calc'])
@@ -108,8 +109,13 @@ def main():
     """Executed when we are launched"""
 
     doc = LoadMetadata()
-    container = MakeContainer(doc)
+    container = MakeContainer(doc,drop=True,path=SAMPLE_DB)
     #container=InMemoryEntityContainer(doc.root.DataServices['CalcSchema.Calc'])
+    Data = doc.root.DataServices[
+        'CalcSchema.Calc.DataPoints']
+    Pairs = doc.root.DataServices[
+        'CalcSchema.Calc.KeyValuePairs']
+    LoadData(Data, Pairs, SAMPLE_DIR)
     server = ReadOnlyServer(serviceRoot=SERVICE_ROOT)
     server.SetModel(doc)
     t = threading.Thread(
@@ -118,11 +124,7 @@ def main():
     t.start()
     logging.info("Starting HTTP server on %s" % SERVICE_ROOT)
     t.join()
-    Data = doc.root.DataServices[
-        'CalcSchema.Calc.DataPoints']
-    Pairs = doc.root.DataServices[
-        'CalcSchema.Calc.KeyValuePairs']
-    LoadData(Data, Pairs, SAMPLE_DIR)
+
 
 if __name__ == '__main__':
     #logging.basicConfig(level=logging.INFO)
