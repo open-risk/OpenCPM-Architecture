@@ -71,7 +71,10 @@ def LoadDataFromFile(Data,Pairs, f):
                 pair['Value'].set_from_value(data[(i+1)*2+1])
                 pairs_collection.InsertEntity(pair)
                 dataPoint['KeyValuePairs'].BindEntity(pair)
-                collection.update_entity(dataPoint)
+                # our entity has nothing but keys, so we take a shortcut
+                # to avoid a pyslet bug in update_entity and update the
+                # bindings only
+                collection.update_bindings(dataPoint)
 
 
 def DryRun():
