@@ -13,23 +13,24 @@
             </EntityContainer>
             <EntityType Name="DataPoint">
                 <Key>
-                    <PropertyRef Name="Target"/>
-                    <PropertyRef Name="Address"/>
+                    <PropertyRef Name="ID"/>
                 </Key>
+                <Property Name="ID" Type="Edm.String" MaxLength="256" Unicode="false" Nullable="false"/>
                 <Property Name="Target" Type="Edm.String" MaxLength="256" Unicode="false"/>
-                <Property Name="Address" Type="Edm.String" MaxLength="256" Unicode="false"/>
                 <NavigationProperty Name="KeyValuePairs" Relationship="CalcSchema.DataPointKeyValuePair"
                     FromRole="DataPoint" ToRole="KeyValuePair"/>
             </EntityType>
             <EntityType Name="KeyValuePair">
                 <Key>
-                        <PropertyRef Name="Key"/>
-                        <PropertyRef Name="Value"/>
+                    <PropertyRef Name="ID"/>
+                    <PropertyRef Name="Key"/>
                 </Key>
+                <Property Name="ID" Type="Edm.String" MaxLength="256" Unicode="false" Nullable="false"/>
                 <Property Name="Key" Type="Edm.String" Nullable="false" MaxLength="256"
                         Unicode="true" FixedLength="false"/>
                 <Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="256"
                         Unicode="true" FixedLength="false"/>
+                <Property Name="Address" Type="Edm.String" MaxLength="256" Unicode="false"/>
                 <NavigationProperty Name="DataPoint" Relationship="CalcSchema.DataPointKeyValuePair"
                     FromRole="KeyValuePair" ToRole="DataPoint"/>
             </EntityType>

@@ -61,17 +61,20 @@ def LoadDataFromFile(Data,Pairs, f):
             if not data:
                 continue
             dataPoint = collection.new_entity()
-            dataPoint['Target'].set_from_value(data[0])
-            dataPoint['Address'].set_from_value(data[1])
+            dataPoint['ID'].set_from_value(data[0])
+            dataPoint['Target'].set_from_value(data[1])
+
             collection.insert_entity(dataPoint)
             # KeyValue Pairs
-            for i in xrange((len(data)-1)/2):
+            for i in xrange((len(data)-3)/2):
                 pair=pairs_collection.new_entity()
-                pair['Key'].set_from_value(data[(i+1)*2])
-                pair['Value'].set_from_value(data[(i+1)*2+1])
+                pair['ID'].set_from_value(data[0])
+                pair['Key'].set_from_value(data[(i+1)*2+1])
+                pair['Value'].set_from_value(data[(i+1)*2+2])
+                pair['Address'].set_from_value(data[2])
                 pairs_collection.InsertEntity(pair)
                 dataPoint['KeyValuePairs'].BindEntity(pair)
-                collection.update_entity(dataPoint)
+                collection.update_bindings(dataPoint)
 
 
 def DryRun():
