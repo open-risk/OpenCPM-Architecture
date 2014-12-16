@@ -15,3 +15,5 @@ This is a sketch and it could very well be faulty or useless.
 TODO:
 
 Write an R server to illustrate the concept as the LibreOffice server is not working.
+
+The mock-up is inspired by OpenGamma and how requirements are handled there. https://opengamma-docs.atlassian.net/wiki/display/DOC210/OpenGamma+Analytics+Value+Requirements
