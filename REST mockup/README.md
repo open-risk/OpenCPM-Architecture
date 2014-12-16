@@ -2,9 +2,9 @@ A RESTful approach:
 
 1. A server with pyoo that accesses calc workbooks in libreoffice - here python 3 and libreoffice 4.3 are required. Problems with opening multiple instances of LibreOffice Calc.
 
-2. REST server with OData support, pyslet seems to be the option - has to run python 2.7. A tutorial is here http://qtimigration.googlecode.com/svn/ ... ample.html. In-memory will do for now. The example data does not load properly.
+2. REST server with OData support, pyslet seems to be the option - has to run python 2.7. A tutorial is here http://qtimigration.googlecode.com/svn/ ... ample.html. In-memory will do for now. The server now works - i have had an issue but it is now closed (see issues for details).
 
-3. A very simple OData model for the REST server as defined in the tutorial above: requirement (CURVE, PRESENT_VALUE, MARKET _VALUE and so on ), location( adress to the server in 1 where the calcbook resides). Then for each rule there will be a additional list of name/value pairs - currency=USF, Method=BASR.
+3. A very simple OData model for the REST server as defined in the tutorial above: requirement (CURVE, PRESENT_VALUE, MARKET _VALUE and so on ), location( adress to the server in 1 where the calcbook resides). Then for each rule there will be a additional list of name/value pairs - currency=USF, Method=BASR. This is now working.
 
 4. Calc workbooks in which a range is defined corresponding to a requirement as defined in 3. A calc workbook will typically use ranges from other calc workbooks*. This is where the REST server comes in - The input to a calc workbook is done via filtered requests to the REST server; for instance a request for a CURVE with currency=USD, method=BASR.
 
