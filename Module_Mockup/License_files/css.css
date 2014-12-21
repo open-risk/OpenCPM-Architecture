@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lora'), local('Lora-Regular'), url(https://fonts.gstatic.com/s/lora/v9/5-AYViExptypIdFoLKAxTA.woff) format('woff');
+}
