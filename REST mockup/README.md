@@ -1,19 +1,18 @@
-A RESTful approach:
+Riskmodel Dispatcher:
 
-1. A server with pyoo that accesses calc workbooks in libreoffice - here python 3 and libreoffice 4.3 are required. Problems with opening multiple instances of LibreOffice Calc.
+It connects models and data across different modules and systems via web services. The basic idea is that the result of one calculation is used as input of another, forming a three of calculations, dynamically dispatched. Uses a single point of dispatching.
 
-2. REST server with OData support, pyslet seems to be the option - has to run python 2.7. A tutorial is here http://qtimigration.googlecode.com/svn/ ... ample.html. In-memory will do for now. This is not possible to implement in pyslet.
+How it works?
 
-3. A very simple OData model for the REST server as defined in the tutorial above: requirement (CURVE, PRESENT_VALUE, MARKET _VALUE and so on ), location( for instance the adress to the server in 1 where the calcbook resides). Then for each rule there will be a additional list of name/value pairs - currency=USF, Method=BASR. Update: This is not possible to implement in pyslet. The server is now called metaserver and uses plain SQL instead.
+Requests for results are made to the dispatching server – request are query style. First element is the output of the required calculation, the second is the entity on which it is applied. Beyond these two fixed elements, the filter is augmented  with a sequence of not predefined keyvalue pairs. For instance an interest curve is requested via http://local host/?Target=CURVE& Method=BASR&Currency=USD. The dispatching server will return an XML atom feed that matches this query.
 
-4. Calc workbooks in which a range is defined corresponding to a requirement as defined in 3. A calc workbook will typically use ranges from other calc workbooks*. This is where the REST server comes in - The input to a calc workbook is done via filtered requests to the REST server; for instance a request for a CURVE with currency=USD, method=BASR.
+Install
 
-*The use of calc workbooks is for illustration only, of course real databases, matlab, R and Python can be used as (end)nodes as well as the OData database itself.
+Tested on Linux Mint Qiana. Python3.3 and LIbreOffice > 4.3 is required. The current version supports LibreOffice calcsheets. Requests from one calcsheet are dispatched to other sheets where data or results from calculations are retrieved.
 
-This is a sketch and it could very well be faulty or useless.
+Example
 
-TODO:
-
-Write an R server to illustrate the concept as the LibreOffice server is not working.
+Licence
+GNU
 
 The mock-up is inspired by OpenGamma and how requirements are handled there. https://opengamma-docs.atlassian.net/wiki/display/DOC210/OpenGamma+Analytics+Value+Requirements
