@@ -176,7 +176,6 @@ class MetaHandler(BaseHTTPRequestHandler):
         self.send_header("Content-type", "text/xml")
         self.send_header('Access-Control-Allow-Origin', '*')
         self.end_headers()
-        # self.wfile.write(bytes("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "utf-8"))
         # I am not an python expert
         #params = parse_qs(urlparse(url.strip()).query, keep_blank_values=True)
         query = parse_qs(urlparse(self.path)[4])
