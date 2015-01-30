@@ -10,9 +10,12 @@ Install
 
 Tested on Linux Mint Qiana. Python3.3 and LIbreOffice > 4.3 is required. The current version supports LibreOffice calcsheets. Requests from one calcsheet are dispatched to other sheets where data or results from calculations are retrieved.
 
-Example
+Examples
+
+In the example folder a simple bond pricing example. http://localhost:9001/?Target=PV yields the same result as in the Bond_Price_Yield_Zero_Curve.ods.
 
 Licence
+
 GNU
 
 The mock-up is inspired by OpenGamma and how requirements are handled there. https://opengamma-docs.atlassian.net/wiki/display/DOC210/OpenGamma+Analytics+Value+Requirements
