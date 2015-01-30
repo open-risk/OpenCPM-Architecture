@@ -2,7 +2,9 @@
 PyOO - Pythonic interface to Apache OpenOffice API (UNO)
 
 Copyright (c) 2014 Seznam.cz, a.s.
-
+$ modified,: oyvind
+# added support for silent opening calcsheet
+# added support range in calc sheet
 """
 
 from __future__ import division
@@ -1838,11 +1840,18 @@ class Desktop(_UnoProxy):
         Opens an exiting spreadsheet document on the local file system.
         """
         extra = ()
-        if as_template:
-            pv = uno.createUnoStruct('com.sun.star.beans.PropertyValue')
-            pv.Name = 'AsTemplate'
-            pv.Value = True
-            extra += (pv,)
+        #if as_template:
+        #    pv = uno.createUnoStruct('com.sun.star.beans.PropertyValue')
+        #    pv.Name = 'AsTemplate'
+        #    pv.Value = True
+        #    extra += (pv,)
+        pv = uno.createUnoStruct('com.sun.star.beans.PropertyValue')
+        pv.Name = 'Hidden'
+        pv.Value = True
+        pv2 = uno.createUnoStruct('com.sun.star.beans.PropertyValue')
+        pv2.Name = 'ReadOnly'
+        pv2.Value = True
+        extra += (pv,pv2)
         # UNO requires absolute paths
         url = uno.systemPathToFileUrl(os.path.abspath(path))
         document = self._open_url(url, extra)

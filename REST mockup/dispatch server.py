@@ -2,7 +2,7 @@
 # Written in python 3.3
 # See Webservice.ods for example usage
 
-import pyoo
+import pyoo_deriv
 import subprocess
 import os
 import signal
@@ -143,19 +143,19 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(bytes("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "utf-8"))
         # I am not an python expert
         query = parse_qs(self.path[2:])
-        qr = str(query['path'])[2:-2]
-        qr2 = str(query['range'])[2:-2]
-        ver = qr2.rsplit(sep='$')[0].rsplit(':')
-        hor = qr2.rsplit(sep='$')[1].rsplit(':')
-        ver_n = [int(ns) for ns in ver]
-        hor_n = [int(ns) for ns in hor]
+        path = str(query['path'])[2:-2]
+        range = str(query['range'])[2:-2]
+        #ver = qr2.rsplit(sep='$')[0].rsplit(':')
+        #hor = qr2.rsplit(sep='$')[1].rsplit(':')
+        #ver_n = [int(ns) for ns in ver]
+        #hor_n = [int(ns) for ns in hor]
         portid = [i for i, val in enumerate(usedport) if val == 0][0]
         port = avport[portid]
         usedport[portid] = 1
-        desktop = pyoo.Desktop('localhost', port)
-        doc = desktop.open_spreadsheet(qr)
+        desktop = pyoo_deriv.Desktop('localhost', port)
+        doc = desktop.open_spreadsheet(path)
         sheet = doc.sheets[0]
-        result = sheet[ver_n[0]:ver_n[1], hor_n[0]:hor_n[1]].values
+        result = sheet[range].values
         self.wfile.write(data2xml(result))
         doc.close();
         # subprocess.Popen("kill %s" % process,shell=True) #kill process
@@ -241,14 +241,14 @@ def metaServer():
     conn = MakeContainer(drop=True, path=SAMPLE_DB)
     LoadData(conn, SAMPLE_DIR)
     myMetaServer = ThreadedHTTPServer(('localhost', 9001), MetaHandler)
-    print(time.asctime(), "Meta Server Started - %s:%s" % (hostName, hostPort))
+    print(time.asctime(), "Dispatch Server Started - %s:%s" % (hostName, 9001))
     myMetaServer.serve_forever()
 
 
 def libreServer():
     libre_init()
     myServer = ThreadedHTTPServer(('localhost', 9000), Handler)
-    print(time.asctime(), "LIbre Server Started - %s:%s" % (hostName, hostPort))
+    print(time.asctime(), "Libre Server Started - %s:%s" % (hostName, 9000))
     myServer.serve_forever()
 
 
