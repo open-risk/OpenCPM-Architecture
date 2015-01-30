@@ -1,3 +1,5 @@
-1,CURVE,path=Examples/curve.ods&range=CURVE,Currency,USD,Method,BASR,Key3,Value3
+1,CURVE,path=Examples/curve.ods&range=CURVE,Target,CURVE,Currency,USD,Method,BASR,Key3,Value3
 2,CURVE,curve.osd,Currency,EUR,Method,BASR,Key3,Value3
 3,CURVE,curve2.osd,Currency,EUR,Method,DNB
+4,ASSET,path=Examples/Bonds.ods&range=ASSET,Target,ASSET,Ticker,aaabbb
+4,ASSET,path=Examples/Bond_Price_Yield_Zero_Curve.ods&range=PV,Target,PV
