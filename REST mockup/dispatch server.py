@@ -91,7 +91,7 @@ def LoadDataFromFile(conn, f):
         for i in range(int((len(data) - 3) / 2)):
             key = 'key'
             value = 'value'
-            cur.execute("INSERT INTO keyvalue VALUES(?,?,?)", (last_id, data[(i + 1) * 2 + 1], data[(i + 1) * 2 + 2]))
+            cur.execute("INSERT INTO keyvalue VALUES(?,?,?)", (last_id, data[(i + 1) * 2 + 1].rstrip(), data[(i + 1) * 2 + 2].rstrip()))
         conn.commit()
     conn.close()
 
