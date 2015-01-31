@@ -8,11 +8,12 @@ Requests for results are made to the dispatching server – request are query st
 
 Install
 
-Tested on Linux Mint Qiana. Python3.3 and LIbreOffice > 4.3 is required. The current version supports LibreOffice calcsheets. Requests from one calcsheet are dispatched to other sheets where data or results from calculations are retrieved.
+run python3.3 dispatch\ server.py in terminal. Stop the servers Cntrl+C (twice)
+Tested on Linux Mint Qiana. Python3.3 and LibreOffice > 4.3 is required.
 
 Examples
 
-In the example folder a simple bond pricing example. http://localhost:9001/?Target=PV yields the same result as in the Bond_Price_Yield_Zero_Curve.ods.
+After staring the server, open the the simple bond pricing example Bond_Price_Yield_Zero_Curve.ods in the example folder. Targetting  http://localhost:9001/?Target=PV yields the same result as in the calcsheet.
 
 Licence
 
