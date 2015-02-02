@@ -8,12 +8,12 @@ Requests for results are made to the dispatching server – request are query st
 
 Install
 
-run python3.3 dispatch\ server.py in terminal. Stop the servers Cntrl+C (twice)
+run python3.3 dispatch\ server.py in terminal. Stop the servers Ctrl+C (twice)
 Tested on Linux Mint Qiana. Python3.3 and LibreOffice > 4.3 is required.
 
 Examples
 
-After staring the server, open the the simple bond pricing example Bond_Price_Yield_Zero_Curve.ods in the example folder. Targetting  http://localhost:9001/?Target=PV yields the same result as in the calcsheet.
+After starting the server, open the the simple bond pricing example Bond_Price_Yield_Zero_Curve.ods in the example folder. Targetting  http://localhost:9001/?Target=PV yields the same result as in the calcsheet.
 
 Licence
 
