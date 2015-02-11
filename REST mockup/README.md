@@ -1,6 +1,6 @@
 Riskmodel Dispatcher:
 
-It connects models and data across different modules and systems via web services. The basic idea is that the result of one calculation is used as input of another, forming a three of calculations, dynamically dispatched. Uses a single point of dispatching.
+It connects models and data across different modules and systems via web services. The basic idea is that the result of one calculation is used as input of another, forming a tree of calculations, dynamically dispatched. Uses a single point of dispatching.
 
 How it works?
 
