@@ -9,7 +9,7 @@ Requests for results are made to the dispatching server – request are query st
 Install
 
 run python3.3 dispatch\ server.py in terminal. Stop the servers Ctrl+C (twice)
-Tested on Linux Mint Qiana. Python3.3 and LibreOffice > 4.3 is required.
+Tested on Linux Mint Qiana. Python3.3, python-uno package and LibreOffice > 4.3 are required.
 
 Examples
 
