@@ -1,8 +1,7 @@
 OpenCPM
 =======
 
-A public repository to facilitate the discussion / development of the "SMELib" test case
-(part of the credit portfolio management module)
+A public repository to facilitate the discussion and development of OpenCPM, an open source credit portfolio modelling suite
 
 The repository stores mockups/ proof of principle implementations etc
 
