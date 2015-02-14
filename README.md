@@ -11,6 +11,9 @@ Further details will follow as we flesh out the designs through the test cases, 
 ### Risk Forum 
 Use the [forum](https://www.openrisk.eu/commons/forum/viewforum.php?f=20) for discussions
 
+### Risk Manual
+Use the [manual](https://www.openrisk.eu/commons/risk_manual/Main_Page) for documentation of use cases
+
 ### Contributions
 
 If you want to contribute to OpenCPM please sign first the <a href="https://www.clahub.com/agreements/open-risk/OpenCPM">Contributor License Agreement</a>
