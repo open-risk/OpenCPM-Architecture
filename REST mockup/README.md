@@ -1,4 +1,11 @@
-Riskmodel Dispatcher:
+We are looking for contributors:
+
+1. Users that implement their analytics in the framework
+2. Developers that can enhance the core dispatching functionality
+
+we'd like to hear from you!
+
+Microservices Risk Analytics 
 
 It connects models and data across different modules and systems via web services. The basic idea is that the result of one calculation is used as input of another, forming a tree of calculations, dynamically dispatched. Uses a single point of dispatching.
 
@@ -14,6 +21,7 @@ Tested on Linux Mint Qiana. Python3.3, the python3-uno package and LibreOffice >
 Examples
 
 After starting the server, open the the simple bond pricing example Bond_Price_Yield_Zero_Curve.ods in the example folder. Targetting  http://localhost:9001/?Target=PV yields the same result as in the calcsheet.
+
 
 Licence
 
