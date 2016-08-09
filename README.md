@@ -9,7 +9,7 @@ The overall design of OpenCPM is expressed in this figure:
 Further details will follow as we flesh out the designs through the test cases, mockups and other preliminary work
 
 ### Risk Forum 
-Use the [forum](https://www.openrisk.eu/commons/forum/viewforum.php?f=20) for discussions
+Use the [forum](https://www.openrisk.eu/openrisk/forums/forum/open-source-development/opencpm/) for discussions
 
 ### Risk Manual
 Use the [manual](https://www.openrisk.eu/commons/risk_manual/Main_Page) for documentation of use cases

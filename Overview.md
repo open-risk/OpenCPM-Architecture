@@ -1,12 +1,20 @@
-## API for input / output interaction between application modules:
+## API Overview
 
-### Applications / modules and key inputs (I) and outputs (O)
+This is the high level overview of the input / output interaction between 
+the different OpenCPM application components:
+
+### Applications / modules
+
+The following lists the key inputs (I) and outputs (O) of all modules
  
-#### A1 model calculator (Simulation / Calculation engine - C++ or Python based):
+#### A1 Simulation Engine (C++ based):
 
-- A1_I1 receives portfolio data
-- A1_I2 receives model configuration files
-- A1_O1 emits numerical outputs
+This is the core simulation (scenario) engine. 
+
+* A1_I1 Engine receives model configuration files
+* A1_I2 Engine receives portfolio data
+* A1_I3 Engine receives use scenario data
+* A1_O1 Engine emits numerical outputs
 
 #### A2 model configurator (CLI/GUI application):
 
@@ -40,7 +48,7 @@
 - A7_O1 emits textual reports (html, pdf)
 
 
-### Databases:
+### Database API's:
 
 #### D1 portfolio database:
 

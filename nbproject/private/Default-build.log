@@ -1,0 +1,8 @@
+g++ -c -Wall -I/usr/local/include/Poco -I /usr/local/include/trng -I . main.cpp -o main.o
+g++ -c -Wall -I/usr/local/include/Poco -I /usr/local/include/trng -I . spsim.cpp -o spsim.o
+g++ -c -Wall -I/usr/local/include/Poco -I /usr/local/include/trng -I . integrationsettings.cpp -o integrationsettings.o
+g++ -c -Wall -I/usr/local/include/Poco -I /usr/local/include/trng -I . portfolio.cpp -o portfolio.o
+g++ -c -Wall -I/usr/local/include/Poco -I /usr/local/include/trng -I . normal_distribution.cpp -o normal_distribution.o
+g++ -c -Wall -I/usr/local/include/Poco -I /usr/local/include/trng -I . BivariateNormalDistribution.cpp -o BivariateNormalDistribution.o
+g++ -c -Wall -I/usr/local/include/Poco -I /usr/local/include/trng -I . random_var.cpp -o random_var.o
+g++ -o simulator main.o spsim.o integrationsettings.o portfolio.o normal_distribution.o BivariateNormalDistribution.o random_var.o -lPocoJSON -lPocoFoundation -larmadillo -ltrng4
