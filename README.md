@@ -1,4 +1,4 @@
-## OpenCPM
+## OpenCPM Architecture
 
 A public repository to facilitate the discussion and development of OpenCPM, an open source credit portfolio modelling suite. The repository stores mockups/ proof of principle implementations etc. At this stage we are in pre-alpha, little to download but we welcome keen developers who want to be involved in OpenCPM from the very beginning.
 
