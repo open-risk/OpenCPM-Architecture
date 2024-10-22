@@ -1,6 +1,6 @@
 ## The OpenCPM Architecture (Archive)
 
-This is a public repository to facilitate the discussion and development of **OpenCPM*. OpenCPM stands for Open Credit Portfolio Management. Ongoing development and demos of the OpenCPM concept are available at the [Open Risk API repo](https://github.com/open-risk/Open_Risk_API)
+This is a public repository to facilitate the discussion and development of **OpenCPM**. OpenCPM stands for Open Credit Portfolio Management. Ongoing development and demos of the OpenCPM concept are available at the [Open Risk API repo](https://github.com/open-risk/Open_Risk_API)
 
 
 ## About OpenCPM
