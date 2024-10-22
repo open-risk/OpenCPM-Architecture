@@ -15,16 +15,16 @@ The overall design of OpenCPM is expressed in this figure:
 
 ### Portfolio Management Platforms and Tools
 
-* Equinox: Sustainable Portfolio Management 
-* openNPL: Non-Performing Loan Management
-* Solstice: Scenario Analysis, Stress Testing and Simulation of Economic Networks
+* [Equinox](https://github.com/open-risk/equinox): Sustainable Portfolio Management 
+* [openNPL](https://github.com/open-risk/openNPL): Non-Performing Loan Management
+* [Solstice](https://github.com/open-risk/solstice): Scenario Analysis, Stress Testing and Simulation of Economic Networks
 
 ### Risk Modeling Tools and Libraries
 
-* openLGD
-* openRiskScore
-* transitionMatrix
-* concentrationMetrics
+* [openLGD](https://github.com/open-risk/openLGD)
+* [openRiskScore](https://github.com/open-risk/openRiskScore)
+* [transitionMatrix](https://github.com/open-risk/transitionMatrix)
+* [concentrationMetrics](https://github.com/open-risk/portfolioAnalytics)
 
 ## Further Resources
 
